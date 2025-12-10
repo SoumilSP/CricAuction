@@ -27,7 +27,7 @@ const App = () => (
             <Route path="/tournaments" element={<Tournaments />} />
             <Route path="/tournaments/:id" element={<TournamentDetail />} />
             <Route path="/tournaments/new" element={<CreateTournament />} />
-            <Route path="/auth" element={<Auth />} />
+            {/* <Route path="/auth" element={<Auth />} /> */}
             <Route path="/register" element={<Register />} />
             <Route path="/become-organizer" element={<BecomeOrganizer />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
