@@ -33,8 +33,8 @@ const App = () => (
             <Route path="/tournaments/:id" element={<TournamentDetail />} />
             <Route path="/tournaments/:id/edit" element={<EditTournament />} />
             <Route path="/tournaments/new" element={<CreateTournament />} />
-            {/* <Route path="/auth" element={<Auth />} />
-            <Route path="/register" element={<Register />} />
+            <Route path="/auth" element={<Auth />} />
+            {/*<Route path="/register" element={<Register />} />
             <Route path="/register-umpire" element={<RegisterUmpire />} /> */}
             {/* <Route path="/register-ground-owner" element={<RegisterGroundOwner />} /> */}
             <Route path="/become-organizer" element={<BecomeOrganizer />} />
