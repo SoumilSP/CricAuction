@@ -35,7 +35,7 @@ const App = () => (
             <Route path="/tournaments/new" element={<CreateTournament />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/register-umpire" element={<RegisterUmpire />} /> */}
+            <Route path="/register-umpire" element={<RegisterUmpire />} /> 
             <Route path="/register-ground-owner" element={<RegisterGroundOwner />} /> 
             <Route path="/become-organizer" element={<BecomeOrganizer />} />
             <Route path="/auctions" element={<LiveAuctions />} />
