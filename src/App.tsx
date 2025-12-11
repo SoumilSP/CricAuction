@@ -8,17 +8,20 @@ import Index from "./pages/Index";
 import Tournaments from "./pages/Tournaments";
 import TournamentDetail from "./pages/TournamentDetail";
 import CreateTournament from "./pages/CreateTournament";
+import EditTournament from "./pages/EditTournament";
 import Auth from "./pages/Auth";
 import Register from "./pages/Register";
 import BecomeOrganizer from "./pages/BecomeOrganizer";
+import LiveAuctions from "./pages/LiveAuctions";
+import LiveAuction from "./pages/LiveAuction";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <AuthProvider>
-      <TooltipProvider>
+    <TooltipProvider>
+      <AuthProvider>
         <Toaster />
         <Sonner />
         <BrowserRouter>
@@ -26,16 +29,18 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/tournaments" element={<Tournaments />} />
             <Route path="/tournaments/:id" element={<TournamentDetail />} />
+            <Route path="/tournaments/:id/edit" element={<EditTournament />} />
             <Route path="/tournaments/new" element={<CreateTournament />} />
-            {/* <Route path="/auth" element={<Auth />} /> */}
+            <Route path="/auth" element={<Auth />} />
             <Route path="/register" element={<Register />} />
             <Route path="/become-organizer" element={<BecomeOrganizer />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            {/* <Route path="/auctions" element={<LiveAuctions />} />
+            <Route path="/auctions/:id" element={<LiveAuction />} /> */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
-      </TooltipProvider>
-    </AuthProvider>
+      </AuthProvider>
+    </TooltipProvider>
   </QueryClientProvider>
 );
 
